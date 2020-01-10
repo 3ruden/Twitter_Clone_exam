@@ -1,6 +1,6 @@
 <h3>以下の内容でツイートする。</h3>
 
-<%= form_with(model: @mytweet, lacal: true) do |form| %>
+<%= form_with(model: @mytweet, local: true) do |form| %>
   <%= form.hidden_field :content %>
 
   <p>ツイート内容：<%= @mytweet.content %></p>
