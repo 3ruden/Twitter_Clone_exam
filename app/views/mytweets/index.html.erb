@@ -1,3 +1,4 @@
+<% provide(:title, 'ツイート一覧') %>
 <h1>Mytweets</h1>
 
 <p id=#notice><%= notice %></p>
@@ -8,7 +9,7 @@
 
 <table>
   <tr>
-    <th>本文</th>
+    <th>ツイート内容</th>
   </tr>
   <% @mytweets.each do |mytweet| %>
     <tr>
