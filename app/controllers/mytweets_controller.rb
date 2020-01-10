@@ -1,5 +1,5 @@
 class MytweetsController < ApplicationController
-  before_action :set_mytweet, only: %i(show)
+  before_action :set_mytweet, only: %i(show edit update)
 
   def index
     @mytweets = Mytweet.all
@@ -25,6 +25,11 @@ class MytweetsController < ApplicationController
   end
 
   def update
+    if @mytweet.update(mytweet_params)
+      redirect_to mytweets_path, notice: "ツイートを編集しました！"
+    else
+      render :edit
+    end
   end
 
   def destroy
