@@ -1,5 +1,6 @@
 class MytweetsController < ApplicationController
   def index
+    @mytweets = Mytweet.all
   end
 
   def show
