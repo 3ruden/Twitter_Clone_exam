@@ -1,4 +1,6 @@
 class MytweetsController < ApplicationController
+  before_action :set_mytweet, only: %i(show)
+
   def index
     @mytweets = Mytweet.all
   end
@@ -33,4 +35,8 @@ class MytweetsController < ApplicationController
     params.require(:mytweet).permit(:content)
   end
 
+  def set_mytweet
+    @mytweet = Mytweet.find(params[:id])
+  end
 end
+
