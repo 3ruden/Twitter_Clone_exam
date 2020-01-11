@@ -1,22 +1,20 @@
 <% provide(:title, 'ツイート一覧') %>
-<h1>Mytweets</h1>
 
 <p id=#notice><%= notice %></p>
 
-<%= link_to 'ツイート新規作成画面へ進む', new_mytweet_path %>
+<p><%= link_to 'ツイート新規作成画面へ進む', new_mytweet_path %></p>
 
-<h2>ツイート一覧</h2>
+<h1>ツイート一覧</h1>
 
-<table>
-  <tr>
-    <th>ツイート内容</th>
-  </tr>
-  <% @mytweets.each do |mytweet| %>
-    <tr>
-      <td><%= mytweet.content %></td>
-      <td><%= link_to '詳細を確認する', mytweet_path(mytweet.id)%></td>
-      <td><%= link_to '本文を編集する', edit_mytweet_path(mytweet.id) %></td>
-      <td><%= link_to '本文を削除する', mytweet_path(mytweet.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %></td>
-    </tr>
-  <% end %>
-</table>
+<% @mytweets.each do |mytweet| %>
+  <div class="tweet clearfix">
+    <div class="content">
+      <%= mytweet.content %>
+    </div>
+    <ul class="clearfix">
+      <li><%= link_to '詳細を確認する', mytweet_path(mytweet.id)%></li>
+      <li><%= link_to '本文を編集する', edit_mytweet_path(mytweet.id) %></li>
+      <li><%= link_to '本文を削除する', mytweet_path(mytweet.id), method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %></li>
+    </ul>
+  </div>
+<% end %>

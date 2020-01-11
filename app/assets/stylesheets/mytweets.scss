@@ -1,3 +1,99 @@
-// Place all the styles related to the mytweets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@charset "UTF-8";
+
+@-ms-viewport {width: device-width;}
+
+html {
+  font-size:62.5%;
+}
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-family:'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+ font-weight: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  float: right;
+  margin-right: 5px;
+}
+
+li {
+  list-style: none;
+  float: left;
+  font-size: 1.5rem;
+  margin-left: 2px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header {
+  font-weight: bold;
+  font-size: 3rem;
+  padding :20px;
+  background-color: #eee;
+}
+
+header a {
+  text-decoration: none;
+  color: #333;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.tweet {
+  border: solid 1px #eee;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 2rem;
+  word-break: break-all;
+}
+
+.content {
+  min-height: 50px;
+  text-align: left;
+  padding: 5px;
+}
+
+footer {
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

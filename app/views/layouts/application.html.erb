@@ -11,6 +11,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div><%= link_to 'Mytweets', mytweets_path %></div>
+    </header>
+    <div class="wrapper">
+      <div class="container">
+        <%= yield %>
+      </div>
+      <footer>
+        <small>&copy;2020 Micchan.</small>
+      </footer>
+    </div>
   </body>
 </html>
