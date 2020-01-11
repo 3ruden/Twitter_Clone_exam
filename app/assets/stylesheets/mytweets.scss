@@ -68,7 +68,6 @@ p {
 .container {
   width: 980px;
   margin: 0 auto;
-  text-align: center;
 }
 
 h1 {
@@ -78,7 +77,6 @@ h1 {
 .tweet {
   border: solid 1px #eee;
   width: 50%;
-  margin: 0 auto;
   font-size: 2rem;
   word-break: break-all;
 }
@@ -87,6 +85,52 @@ h1 {
   min-height: 50px;
   text-align: left;
   padding: 5px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  &.field {
+    font-size: 1.2rem;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size:1.4rem;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
 }
 
 footer {

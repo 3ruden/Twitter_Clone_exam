@@ -1,10 +1,13 @@
 <% provide(:title, 'ツイート確認') %>
-<h3>以下の内容でツイートする。</h3>
+<h1>以下の内容でツイートする。</h1>
 
 <%= form_with(model: @mytweet, local: true) do |form| %>
   <%= form.hidden_field :content %>
 
-  <p>ツイート内容：<%= @mytweet.content %></p>
+  <p><strong>ツイート内容</strong></p>
+  <p><%= @mytweet.content %></p>
+  <div class="action">
     <%= form.submit "投稿する"  %>
     <%= form.submit "戻る", name: 'back' %>
+  </div>
 <% end %>

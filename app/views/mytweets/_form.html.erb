@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, size: "50x10" %>
   </div>
 
   <div class="action">
@@ -21,4 +21,6 @@
   </div>
 <% end %>
 
-<%= link_to 'ツイート一覧に戻る', mytweets_path %>
+<p>
+  <%= link_to 'ツイート一覧に戻る', mytweets_path %>
+</p>
